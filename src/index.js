@@ -1,10 +1,8 @@
 // Require the necessary discord.js classes
 const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
-//const { token } = require('./config.json');
 require('dotenv').config();
 
 const { REST, Routes } = require('discord.js');
-//const config = require('./Data/config.json');
 const fs = require('node:fs');
 const path = require('node:path');
 const {	Manager	} = require('erela.js');
