@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.3.1",
+    "erela.js": "^2.4.0",
+    "nodemon": "^2.0.22"
+  },
+  "name": "discordbotv1",
+  "version": "1.0.0",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "CDarren",
+  "license": "ISC",
+  "description": ""
+}
