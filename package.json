@@ -5,7 +5,7 @@
     "erela.js": "^2.4.0",
     "nodemon": "^2.0.22"
   },
-  "name": "discordbotv1",
+  "name": "chizuru-v1",
   "version": "1.0.0",
   "main": "./src/index.js",
   "scripts": {
