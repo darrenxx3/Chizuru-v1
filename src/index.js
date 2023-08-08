@@ -26,9 +26,9 @@ const commandFiles = fs.readdirSync('./src/commands').filter(file => file.endsWi
 		const command = require(`./commands/${file}`);
 		client.commands.set(command.data.name, command)
 			commands.push(command.data.toJSON());
-		} 
+		}
 
-// Construct and prepare an instance of the REST module
+		// Construct and prepare an instance of the REST module
 const rest = new REST({ version: '10'}).setToken(process.env.token);
 
 // and deploy your commands!
