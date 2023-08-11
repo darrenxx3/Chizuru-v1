@@ -6,6 +6,7 @@ const { REST, Routes } = require('discord.js');
 const fs = require('node:fs');
 const path = require('node:path');
 const {	Manager	} = require('erela.js');
+const {ActivityType} = require('discord.js');
 
 // Create a new client instance
 const client = new Client({ intents: [GatewayIntentBits.Guilds,
@@ -55,6 +56,10 @@ const rest = new REST({ version: '10'}).setToken(process.env.token);
 // We use 'c' for the event parameter to keep it separate from the already defined 'client'
 client.once(Events.ClientReady, c => {
 	client.manager.init(client.user.id);
+	client.user.setPresence({ 
+		activities: [{ 
+			name: 'chizuru-v1 • /play' }], 
+			status: 'online' });
 	console.log(`✅ ${c.user.tag} is online, have fun!.`);
 });
 
