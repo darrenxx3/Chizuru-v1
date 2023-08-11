@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('discord.js');
-const { MessageEmbed} = require('discord.js');
+const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -36,6 +36,19 @@ module.exports = {
 
     if (!player.playing) player.play();
 
-    interaction.reply(`Now Playing - "${songs.tracks[0].title}"`);
+    //make it embedded
+      const embed = new EmbedBuilder()
+      .setTitle(`[${songs.tracks[0].title}]`)
+      .setURL(songs.url)
+      .setDescription("Now Playing")
+      .setColor('#777FFF')
+      .setThumbnail(songs.tracks[0].thumbnail)
+      .setTimestamp()
+      .setFooter({text: `Requested by:  ${interaction.user.tag}`, 
+                 iconURL: interaction.user.displayAvatarURL()});
+
+    // interaction.reply(`Now Playing - "${songs.tracks[0].title}"`);
+    interaction.reply({ embeds : [embed]});
+
   },
 };
