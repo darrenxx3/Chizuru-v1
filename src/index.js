@@ -82,8 +82,8 @@ client.on('interactionCreate', (interaction) =>{
 // Define some options for the node
 const nodes = [
 	{
-	  host: "suki.nathan.to",
-	  password: "adowbongmanacc",
+	  host: "eu-lavalink.lexnet.cc",
+	  password: "lexn3tl@val!nk",
 	  port: 443,
 	  secure: true
 	}
